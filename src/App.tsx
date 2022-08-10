@@ -1,4 +1,4 @@
-import {Languages} from 'components/languages/Languages';
+import { Languages } from 'components/languages/Languages';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './App.module.scss';
@@ -13,7 +13,6 @@ function App() {
         store.addTodo('Add MobX store.');
         console.log(store.tasks);
         console.log(api);
-        console.log('test')
     }, []);
 
     return (
