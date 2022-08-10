@@ -2,12 +2,12 @@ import { Languages } from 'components/languages/Languages';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './App.module.scss';
-import {store} from './store/store';
+import { store } from './store/store';
 import {api} from './api/index';
 
 function App() {
-    const [isLight, setIsLight] = useState(false);
     const { t } = useTranslation();
+    const [isLight, setIsLight] = useState(false);
 
     useEffect(() => {
         store.addTodo('Add MobX store.');
