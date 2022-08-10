@@ -1,9 +1,9 @@
-import { Languages } from 'components/languages/Languages';
+import {Languages} from 'components/languages/Languages';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './App.module.scss';
 import { store } from './store/store';
-import {api} from './api/index';
+import { api } from './api/index';
 
 function App() {
     const { t } = useTranslation();
