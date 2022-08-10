@@ -13,6 +13,7 @@ function App() {
         store.addTodo('Add MobX store.');
         console.log(store.tasks);
         console.log(api);
+        console.log('test')
     }, []);
 
     return (
