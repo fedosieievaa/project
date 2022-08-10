@@ -1,0 +1,53 @@
+{
+    "env": {
+        "node": true,
+        "es2021": true
+    },
+    "ignorePatterns": ["i18n.ts"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:prettier/recommended",
+        "prettier",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "tsconfigRootDir": "./",
+        "project": ["./tsconfig.json"],
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "rules": {
+        "prettier/prettier": "error",
+        "curly": "error",
+        "object-curly-newline": "off",
+        "react/react-in-jsx-scope": "off",
+        "operator-linebreak": ["error"],
+        "nonblock-statement-body-position": ["error", "below"],
+        "key-spacing": ["error", { "beforeColon": false }],
+        "dot-notation": "error",
+        "newline-per-chained-call": [
+            "error",
+            {
+                "ignoreChainWithDepth": 2
+            }
+        ],
+        "space-before-blocks": "error",
+        "func-call-spacing": ["error", "never"],
+        "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+        "arrow-parens": ["error", "always"],
+        "quotes": ["error", "single", { "avoidEscape": true }],
+        "prefer-template": "error",
+        "comma-spacing": ["error", { "before": false }],
+        "no-tabs": "error",
+        "max-len": ["error", { "code": 120, "ignoreStrings": false }],
+        "semi": "error",
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "max-classes-per-file": ["error", 1]
+    }
+}

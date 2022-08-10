@@ -1,0 +1,36 @@
+.app {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.584);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  & .button {
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 200px;
+    border: none;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  & .paragraph {
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+    padding: 50px 0 0 0;
+  }
+}
+
+.app.light {
+  background-color: rgba(127, 130, 146, 0.584);
+  & .paragraph {
+    color: rgb(51, 47, 47);
+  }
+  & .button {
+    color: black;
+    background: white;
+  }
+}
