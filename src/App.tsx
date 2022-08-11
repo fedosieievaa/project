@@ -1,12 +1,13 @@
-import { Languages } from 'components/Languages/Languages';
 import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import styles from './App.module.scss';
 import { store } from './store/store';
 import { api } from './api/index';
+import { Languages } from 'components/Languages/Languages';
 import { Input } from 'components/Input/Input';
 import { Button } from 'components/Button/Button';
 import { Modal } from 'components/Modal/Modal';
+import { Typography } from 'components/Typography/Typography';
+import { useTranslation } from 'react-i18next';
 
 enum InputTypes {
     primary = 'primary',
@@ -45,12 +46,12 @@ function App() {
                     onClick={() => {
                         setIsLight(!isLight);
                     }}
-                    text={isLight ? t('dark-mode') : t('light-mode')}
+                    text={<Typography text={isLight ? 'dark-mode' : 'light-mode'} isLight={isLight} />}
                     isLight={isLight}
                 />
             </div>
             <div className={styles.form}>
-                <p className={styles.paragraph}>{t('submit-data')}</p>
+                <Typography text='submit-data' style={styles.paragraph} />
                 <Input
                     status={inputStatus}
                     placeholder={t('input-placeholder')}
@@ -78,7 +79,7 @@ function App() {
                             setIsModalOpened(true);
                         }, 2000);
                     }}
-                    text={t('submit')}
+                    text={<Typography text='submit' isLight={isLight} />}
                     isLight={isLight}
                 />
             </div>

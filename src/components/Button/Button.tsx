@@ -3,7 +3,7 @@ import { Loader } from '../Loader/Loader';
 
 type Props = {
     status: string;
-    text?: string;
+    text?: string | JSX.Element;
     onClick: any;
     isLight: boolean;
 };

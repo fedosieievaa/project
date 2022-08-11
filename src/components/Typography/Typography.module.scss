@@ -1,0 +1,7 @@
+.text {
+    font-size: 16px;
+    color: yellow;
+    &.light {
+        color: blue;
+    }
+}

@@ -5,7 +5,7 @@ type Props = {
     status: string;
     value: string;
     error?: string;
-    placeholder?: string;
+    placeholder?: string | any;
     onChange: any;
     isLight: boolean;
 };
