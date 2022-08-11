@@ -1,19 +1,18 @@
 .language {
-  margin: 2px;
-  cursor: pointer;
-  color: white;
-  background-color: var(--main-brand-color-dark);
-  border: none;
-  padding: 3px;
-}
-
-.language:hover {
-  color: var(--main-brand-color-dark);
-  background-color: var(--main-brand-color);
+    margin: 2px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 3px;
+    &:hover {
+        color: black;
+        text-decoration: underline;
+    }
 }
 
 .languages {
-  position: absolute;
-  top: 25px;
-  right: 80px;
+    position: absolute;
+    top: 25px;
+    right: 80px;
 }

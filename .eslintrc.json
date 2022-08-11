@@ -31,12 +31,6 @@
         "nonblock-statement-body-position": ["error", "below"],
         "key-spacing": ["error", { "beforeColon": false }],
         "dot-notation": "error",
-        "newline-per-chained-call": [
-            "error",
-            {
-                "ignoreChainWithDepth": 2
-            }
-        ],
         "space-before-blocks": "error",
         "func-call-spacing": ["error", "never"],
         "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],

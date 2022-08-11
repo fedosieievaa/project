@@ -83,6 +83,16 @@ function App() {
                     isLight={isLight}
                 />
             </div>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laborum, atque necessitatibus illo a
+                tenetur aut rerum quaerat? Ex unde eligendi commodi dolor. Nostrum mollitia doloribus ex architecto
+                temporibus deleniti quam dolores sit natus facilis officia unde cupiditate odit incidunt libero
+                repellendus modi voluptates et quod, quibusdam recusandae tempora omnis voluptatem atque! Porro,
+                similique, molestias dolore ipsa perspiciatis necessitatibus esse officiis voluptatibus tempora magnam
+                ipsam. Quidem fuga doloremque natus magni voluptates accusantium minus reiciendis possimus! Architecto
+                temporibus soluta fuga repudiandae cupiditate eos culpa iste voluptate hic assumenda dolorem tempora,
+                quos modi dicta facilis vel impedit maiores illo eaque similique! Non.
+            </div>
             {isModalOpened && (
                 <Modal
                     close={() => {

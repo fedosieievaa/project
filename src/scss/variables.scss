@@ -1,0 +1,15 @@
+$background-primary: rgb(198, 219, 230);
+$background-secondary: cornflowerblue;
+$background-gradient: $background-primary, $background-secondary, $background-primary;
+
+$color-primary: rgb(18, 157, 157);
+$color-secondary: rgb(177, 189, 211);
+$color-default: rgb(211, 177, 201);
+
+$border-primary: rgba(255, 255, 0, 0.548);
+$border-secondary: rgba(64, 64, 236, 0.503);
+$border-default: rgba(0, 128, 0, 0.521);
+
+$light-theme: $color-primary, $background-primary, $border-primary;
+$dark-theme: $color-secondary, $background-secondary, $border-secondary;
+$default-theme: $color-default, $background-gradient, $border-default;

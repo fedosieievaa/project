@@ -1,0 +1,10 @@
+@mixin color-scheme($text, $background, $border) {
+    @if list.length($background) == 1 {
+        background: $background;
+    } @else {
+        background: linear-gradient(to top left, $background);
+    }
+    color: $text;
+    border: 10px solid $border;
+    @extend %color-scheme-extend;
+}

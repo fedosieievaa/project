@@ -1,8 +1,8 @@
+@use 'sass:list';
+@import './scss';
+
 .app {
-    background-color: rgba(0, 0, 0, 0.584);
-    height: calc(100vh - 50px);
-    margin: 0;
-    padding: 50px 0 0 0;
+    @include color-scheme($default-theme...);
     & .switchTheme {
         position: absolute;
         top: 18px;
@@ -37,7 +37,7 @@
 }
 
 .app.light {
-    background-color: rgba(127, 130, 146, 0.584);
+    @include color-scheme($light-theme...);
     & .paragraph {
         color: rgb(51, 47, 47);
     }
