@@ -12,7 +12,9 @@ type Props = {
 
 export const Input = ({ type = 'text', status, placeholder, error, onChange, value, isLight }: Props) => {
     return (
-        <div className={`${styles.inputWrapper} ${isLight ? styles.light : ''}`}>
+        <div className={`${styles.inputWrapper} ${isLight
+            ? styles.light
+            : ''}`}>
             <input
                 className={`${styles.input} ${styles[status]}`}
                 type={type}

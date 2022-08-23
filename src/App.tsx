@@ -33,12 +33,16 @@ function App() {
 
     useEffect(() => {
         store.addTodo('Add MobX store.');
+        // eslint-disable-next-line no-console
         console.log(store.tasks);
+        // eslint-disable-next-line no-console
         console.log(api);
     }, []);
 
     return (
-        <div className={`${styles.app} ${isLight ? styles.light : ''}`}>
+        <div className={`${styles.app} ${isLight
+            ? styles.light
+            : ''}`}>
             <Languages />
             <div className={styles.switchTheme}>
                 <Button
@@ -46,12 +50,14 @@ function App() {
                     onClick={() => {
                         setIsLight(!isLight);
                     }}
-                    text={<Typography text={isLight ? 'dark-mode' : 'light-mode'} isLight={isLight} />}
+                    text={<Typography text={isLight
+                        ? 'dark-mode'
+                        : 'light-mode'} isLight={isLight} />}
                     isLight={isLight}
                 />
             </div>
             <div className={styles.form}>
-                <Typography text='submit-data' style={styles.paragraph} />
+                <Typography text="submit-data" style={styles.paragraph} />
                 <Input
                     status={inputStatus}
                     placeholder={t('input-placeholder')}
@@ -79,7 +85,7 @@ function App() {
                             setIsModalOpened(true);
                         }, 2000);
                     }}
-                    text={<Typography text='submit' isLight={isLight} />}
+                    text={<Typography text="submit" isLight={isLight} />}
                     isLight={isLight}
                 />
             </div>

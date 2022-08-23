@@ -1,13 +1,11 @@
 {
   "semi": true,
-  "printWidth": 120,
-  "tabWidth": 4,
   "singleQuote": true,
   "bracketSpacing": true,
   "bracketSameLine": false,
   "useTabs": false,
   "arrowParens": "always",
-  "jsxSingleQuote": true,
+  "jsxSingleQuote": false,
   "trailingComma": "all",
   "quoteProps": "as-needed",
   "requirePragma": false,
@@ -16,5 +14,8 @@
   "htmlWhitespaceSensitivity": "css",
   "embeddedLanguageFormatting": "auto",
   "endOfLine": "auto",
-  "singleAttributePerLine": false
+  "singleAttributePerLine": false,
+
+  "printWidth": 120,
+  "tabWidth": 4
 }

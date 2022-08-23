@@ -6,15 +6,17 @@ type Props = {
 
 export const Loader = ({ isLight }: Props) => {
     return (
-        <div className={`${styles.loader} ${isLight ? styles.light : ''}`}>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div className={`${styles.loader} ${isLight
+            ? styles.light
+            : ''}`}>
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
         </div>
     );
 };

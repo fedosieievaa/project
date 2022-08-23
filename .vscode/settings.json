@@ -1,4 +1,5 @@
 {
-  "typescript.validate.enable": true,
-  "cSpell.words": ["languagedetector", "Lngs"]
+    "typescript.validate.enable": true,
+    "cSpell.words": ["languagedetector", "Lngs"],
+    "prettier.stylelintIntegration": true
 }

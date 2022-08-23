@@ -6,7 +6,9 @@ type Props = {
 };
 export const Modal = ({ close, children, isLight }: Props) => {
     return (
-        <div className={`${styles.container} ${isLight ? styles.light : ''}`}>
+        <div className={`${styles.container} ${isLight
+            ? styles.light
+            : ''}`}>
             <div className={styles.modal}>
                 <span className={styles.close} onClick={close}>
                     x

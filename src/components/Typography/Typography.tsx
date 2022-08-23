@@ -10,5 +10,7 @@ type Props = {
 export const Typography = ({ text, style, isLight }: Props) => {
     const { t } = useTranslation();
 
-    return <div className={`${styles.text} ${isLight ? styles.light : ''} ${style}`}>{t(text)}</div>;
+    return (<div className={`${styles.text} ${isLight
+        ? styles.light
+        : ''} ${style}`}>{t(text)}</div>);
 };

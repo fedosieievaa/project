@@ -6,8 +6,8 @@
     "ignorePatterns": ["i18n.ts"],
     "extends": [
         "eslint:recommended",
-        "plugin:prettier/recommended",
-        "prettier",
+        // "plugin:prettier/recommended",
+        // "prettier",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended"
     ],
@@ -21,27 +21,119 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": ["react", "@typescript-eslint", "prettier"],
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+        // "prettier"
+    ],
     "rules": {
-        "prettier/prettier": "error",
+        // "prettier/prettier": "error",
+        // Camel case for variables and names of files
+        // "@typescript-eslint/camelcase": ["error", { "ignoreDestructuring": true }],
+        // Name of class must starts from capital letter
+        "new-cap": ["error", { "newIsCap": true }],
+        // Names of methods must start from verb
+        // "function-name/starts-with-verb": "error",
+        // Declaring multiple variables. Every new variable after comma from a new line
+        "one-var-declaration-per-line": ["error", "initializations"],
+        // Every if / for/ while / switch must contain curly braces with body from new line
         "curly": "error",
+        // For more than condition using new lines
+        "operator-linebreak": ["error"],
+        // Ternary (only for long)
+        "multiline-ternary": ["error", "always"],
+        // Use Dot Notation where possible (class usage) / Use Bracket Notation ONLY with variables/map
+        "dot-notation": "error",
+        // One space must be after "{" and before "}"
+        "object-curly-spacing": ["error", "always"],
+        // No spaces before ":" (after any amount of spaces)
+        "key-spacing": ["error", { "beforeColon": false }],
+        // Multiple object elements from new line
+        "object-property-newline": ["error", { "allowMultiplePropertiesPerLine": false }],
+        //  No spaces before braces when call function
+        "space-before-function-paren": ["error", "never"],
+        // When calling more than one method use new line with tab
+        "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+        // Always use braces for arrow function
+        "arrow-parens": ["error", "always"],
+        // use "return:" to return nothing
+        "consistent-return": ["error"],
+        // Always use single quotes for simple strings
+        "quotes": ["error", "single", { "avoidEscape": true }],
+        // For long string use \ + new line (120 ch for line)
+        "max-len": ["error", { "code": 120, "ignoreStrings": false }],
+        // 1 Tab = 4 spaces (USE SPACES) / Use spaces for tabs
+        "indent": ["error", 4],
+        // Always use semicolon
+        "semi": "error",
+        // No multiple empty lines (more than one)
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        // No console logs (front-end only)!!!!!
+        "no-console": "warn",
+        // No multiple classes declaration in one file
+        "max-classes-per-file": ["error", 1],
+        // If React component has JSX then we give extension .jsx
+        "react/jsx-filename-extension": ["error", { "extensions": [".jsx", ".tsx"] }],
+        // PascalCase for naming React component
+        // "@typescript-eslint/naming-convention": ["error", { "selector": ["function"], "format": ["PascalCase"] }],
+        // Use double quotes for JSX attributes.
+        "jsx-quotes": ["error", "prefer-double"],
+        // Do not separate braces with spaces in JSX.
+        "react/jsx-curly-spacing": ["error", { "when": "never" }],
+        // Do not specify a property value when it is explicitly true.
+        "react/jsx-boolean-value": ["error", "never"],
+        // Wrap jsx to return it if it has more 1 line / One line JSX no braces / More than one line use braces
+        "react/jsx-wrap-multilines": "error",
+        // Always use self-closing tags if an element has no children. / Elements with no children must be self closing
+        "react/self-closing-comp": ["error"],
+        // If your element has more then one properties then use closing tag in new line / Space after self-closing
+        "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+        // Use bind in constructor not in render method
+        // "react/jsx-no-bind": ["error"],
+        // Use one type of declaring one-line comments
+        "multiline-comment-style": ["error", "bare-block"],
+        // Using JSDoc comments (mandatory)
+        // "require-jsdoc": ["warn"],
+        // Always use destructuring for getting props / state values at the top of component method
+        "react/destructuring-assignment": ["error", "always"],
+        // Always use PureComponent (not Component)
+        "no-restricted-properties": [
+            "error",
+            {
+                "object": "React",
+                "property": "Component",
+                "message": "Please use PureComponent instead."
+            }
+        ],
+        // Use ` ` quotes for complex strings (pattern quotes)
+        "no-template-curly-in-string": "error",
+        // Disallow unnecessary concatenation of strings
+        "no-useless-concat": "error",
+        // One space before braces when declare the function
+        "space-before-blocks": "error",
+        // don't give index elements as key when you use loop When you have more then 1 loop in component
+        "react/no-array-index-key": "error",
+
+        // ____________________________________________________________________________
+        // Folders has to have the same name as Component and have to have file index.(jsx or js) which unites other files in this folder.
+        // Config constant names must be uppercase divided by underscore (only GLOBAL scope)
+        // Use one constructor format:  - space after super - each state variable from a new line - methods as is, without in one line
+        // Always use methods for functional props (like events)
+        // All children elements must be from new line with tab
+        // No spaces for setting props
+        // ____________________________________________________________________________
+
+        // ____________________________________CSS_____________________________________
+
         "object-curly-newline": "off",
         "react/react-in-jsx-scope": "off",
-        "operator-linebreak": ["error"],
         "nonblock-statement-body-position": ["error", "below"],
-        "key-spacing": ["error", { "beforeColon": false }],
-        "dot-notation": "error",
-        "space-before-blocks": "error",
         "func-call-spacing": ["error", "never"],
-        "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
-        "arrow-parens": ["error", "always"],
-        "quotes": ["error", "single", { "avoidEscape": true }],
         "prefer-template": "error",
         "comma-spacing": ["error", { "before": false }],
-        "no-tabs": "error",
-        "max-len": ["error", { "code": 120, "ignoreStrings": false }],
-        "semi": "error",
-        "no-multiple-empty-lines": ["error", { "max": 1 }],
-        "max-classes-per-file": ["error", 1]
+        "no-tabs": "error"
+    },
+    "settings": {
+        "version": "999.999.999"
     }
 }
